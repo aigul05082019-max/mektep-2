@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мектеп Іс-шаралары мен Кезекшілік Кестесі</title>
+  <!-- Tailwind CSS стильдерін онлайн қосу -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 text-gray-800 font-sans p-4 md:p-8">
+
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md">
+    <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">
+      🏫 Мектеп Іс-шаралары мен Кезекшілік Кестесі
+    </h1>
+
+    <!-- 1. Кезекшілік кестесі бөлімі -->
+    <section class="mb-8 border-b pb-6">
+      <h2 class="text-xl font-semibold text-gray-700 mb-3">📅 Апталық кезекшілік кестесі</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3">
+        <div class="p-3 bg-blue-50 border border-blue-200 rounded text-center">
+          <span class="font-bold block text-blue-700">Дүйсенбі</span>
+          <span class="text-sm">10 "А" сыныбы</span>
+        </div>
+        <div class="p-3 bg-blue-50 border border-blue-200 rounded text-center">
+          <span class="font-bold block text-blue-700">Сейсенбі</span>
+          <span class="text-sm">10 "Ә" сыныбы</span>
+        </div>
+        <div class="p-3 bg-blue-50 border border-blue-200 rounded text-center">
+          <span class="font-bold block text-blue-700">Сәрсенбі</span>
+          <span class="text-sm">11 "А" сыныбы</span>
+        </div>
+        <div class="p-3 bg-blue-50 border border-blue-200 rounded text-center">
+          <span class="font-bold block text-blue-700">Бейсенбі</span>
+          <span class="text-sm">11 "Ә" сыныбы</span>
+        </div>
+        <div class="p-3 bg-blue-50 border border-blue-200 rounded text-center">
+          <span class="font-bold block text-blue-700">Жұма</span>
+          <span class="text-sm">9 "А" сыныбы</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Іс-шара қосу формасы -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-gray-700 mb-3">🎉 Жаңа іс-шара қосу</h2>
+      <form id="eventForm" class="flex flex-col md:flex-row gap-3">
+        <input 
+          type="text" 
+          id="eventTitle" 
+          placeholder="Іс-шара атауы (мысалы: Алтын күз)" 
+          required 
+          class="flex-1 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+        <input 
+          type="date" 
+          id="eventDate" 
+          required 
+          class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+        <button 
+          type="submit" 
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded transition"
+        >
+          Қосу
+        </button>
+      </form>
+    </section>
+
+    <!-- 3. Іс-шаралар тізімі -->
+    <section>
+      <h2 class="text-xl font-semibold text-gray-700 mb-3">📋 Жоспарланған іс-шаралар</h2>
+      <ul id="eventList" class="space-y-2">
+        <!-- Жаңа іс-шаралар осы жерге JS арқылы қосылады -->
+      </ul>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
